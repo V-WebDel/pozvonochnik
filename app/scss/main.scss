@@ -29,7 +29,7 @@ body{
   font-weight: 400;
   font-size: 16px;
   font-family: $font-default;
-  line-height: 1.4;
+  line-height: 1.2;
   color: $text;
   
   input, textarea {
@@ -50,7 +50,8 @@ b, strong {
   
 .btn {
   display: block;
-  padding: 15px;
+  width: 300px;
+  padding: 20px 50px;
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
@@ -58,6 +59,7 @@ b, strong {
   background-color: $accent;
   border: none;
   border-radius: 30px;
+  box-shadow: 4px 4px 18px 0px rgba(0,0,0,0.35);
   transition: $slowdown;
   cursor: pointer;
   
@@ -65,7 +67,10 @@ b, strong {
     color: #ffffff;
     text-decoration: none;
     background-color: lighten($accent, 10%);
-    box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.95) translateY(3px);
   }
 }
    
@@ -129,7 +134,101 @@ p {
 }
 
 
-/* section */
+/* top */
+.top {
+  position: relative;
+  height: 720px;
+  padding: 40px 0;
+  background-image: url(../img/top-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#27295e, 0.75);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to top, #1b1d53, rgba(#27295e, 0.01));
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+  }
+
+  &__space {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 1;
+    color: $white;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 30px;
+    color: $blue;
+  }
+
+  &__btn {
+
+  }
+}
+
+.space {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 145px;
+  padding: 15px 20px;
+  line-height: 1;
+  color: $white;
+  text-align: center;
+  background-color: $blue;
+  border-radius: 50%;
+  border-top-left-radius: 0;
+
+  &__top {
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__count {
+    font-weight: 900;
+    font-size: 66px;
+    margin-bottom: -5px;
+  }
+
+  &__bottom {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+
 /* section */
 /* section */
 
