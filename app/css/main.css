@@ -298,4 +298,77 @@ p {
   font-size: 14px;
   line-height: 1.2
 }
+.steps {
+  position: relative;
+  background-color: #fbfbfb;
+  background-image: url(../img/steps-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat
+}
+.steps__lst {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+.steps__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 200px;
+  margin-top: -80px;
+  margin-bottom: 30px;
+  text-align: center
+}
+.steps__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 4px 10px 4px rgba(0,0,0,.04);
+  box-shadow: 0 4px 10px 4px rgba(0,0,0,.04)
+}
+.steps__icon svg {
+  width: 85px;
+  height: 85px;
+  fill: #c1cad6
+}
+.steps__icon svg.small {
+  width: 70px;
+  height: 70px
+}
+.steps__number {
+  font-weight: 900;
+  font-size: 30px;
+  color: #ff1053
+}
+.steps__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1
+}
 /*# sourceMappingURL=main.css.map */
