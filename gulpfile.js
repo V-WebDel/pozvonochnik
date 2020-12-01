@@ -39,7 +39,8 @@ function scripts() {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
         'app/libs/svgxuse-master/svgxuse.min.js',
-        // 'app/libs/bootstrap/js/bootstrap.bundle.min.js',
+        'app/libs/GSAP/gsap.min.js',
+        'app/libs/GSAP/ScrollTrigger.min.js',
     ])
     .pipe(concat('scripts.min.js'))
     .pipe(uglify()) // Сжимаем JavaScript
