@@ -1,3 +1,20 @@
-section.action
+section.section.action#action
   .container
-  
+    h2.action__title Cпасите себя от инвалидности!
+    p.action__doc Необходимые документы для приема, которые нужно иметь при себе:<br> Паспорт РФ, Медицинский полис (не обязательно)
+    p.action__subtitle Главный шаг к здоровому позвоночнику<br>
+      span.text-up Вы уже сделали!
+    form.form.action__form(action="")
+      .form__wrap
+        .form__field-wrap
+          input.form__field.form__field_age(name="Lead[age]" type="tel" placeholder="Ваш возраст" required)
+          span лет
+        input.form__field(name="Lead[name]" type="text" placeholder="Ваше имя" required)
+        input.form__field(name="Lead[phone]" type="tel" placeholder="Ваш телефон" required)
+        button.form__btn.btn(type="submit") Записаться
+      label.form__checkbox
+        input.form__checkbox_default(type="checkbox" name="checkbox" value="ready" checked required)
+        span.form__checkbox_new
+          +svg('check')
+        | Нажимая на кнопку, вы даете согласие<br> на обработку персональных данных
+      span.form__note *Акция только для граждан РФ

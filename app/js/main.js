@@ -3,7 +3,16 @@ $(function() {
 	
 	// Mask form
 	$('input[name="Lead[phone]"]').mask('8 (999) 999 - 99 - 99');
+	$('input[name="Lead[age]"]').mask('99');
 
+	// Focus field 
+	$('.form__field_age').on('focus', function(){
+		$(this).parent('.form__field-wrap').addClass('focus');
+	});
+
+	$('.form__field_age').on('focusout', function(){
+		$(this).parent('.form__field-wrap').removeClass('focus');
+	});
 
 });
 

@@ -4,7 +4,7 @@
 
 
 ::placeholder {
-  color: #666;
+  color: $grey;
 }
   
 ::selection {
@@ -55,7 +55,9 @@ b, strong {
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
+  text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: $accent;
   border: none;
   border-radius: 30px;
@@ -85,11 +87,12 @@ p {
 }
   
 .title-text {
-  margin-bottom: 0;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 24px;
-  text-align: center;
   line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
 }
   
 .text-accent {
@@ -133,6 +136,10 @@ p {
   }
 }
 
+.section {
+  padding: 45px 0;
+}
+
 
 /* top */
 .top {
@@ -140,7 +147,7 @@ p {
   height: 720px;
   padding: 40px 0;
   background-image: url(../img/top-bg.jpg);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -234,8 +241,8 @@ p {
   position: relative;
   background-color: $white;
   background-image: url(../img/steps-bg.png);
-  background-position: center;
-  background-size: cover;
+  background-position: 90% center;
+  background-size: contain;
   background-repeat: no-repeat;
 
   &__lst {
@@ -293,9 +300,205 @@ p {
 
 
 /* section */
-/* section */
-/* section */
-/* section */
+
+
+/* action */
+.action {
+  padding-top: 60px;
+  text-align: center;
+  background-color: #6c6ea0;
+  background-image: url(../img/action-bg.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 36px;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__doc {
+    margin-bottom: 20px;
+    color: $blue;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 30px;
+    color: $blue;
+  }
+
+  &__form {
+
+  }
+}
+
+.form {
+  width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 50px;
+    background-color: #ffffff;
+    border-radius: 130px;
+    border-top-left-radius: 0;
+  }
+
+  &__field-wrap {
+    position: relative;
+    width: 220px;
+    background-color: #f6f7f7;
+    border: 2px solid #f6f7f7;
+    border-radius: 30px;
+
+    span {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      font-size: 18px;
+      color: $grey;
+      opacity: 0;
+      transform: translateY(-50%);
+      transition: $slowdown;
+    }
+
+    &.focus {
+      border: 2px solid #c1cad6;
+    }
+  }
+
+  &__field {
+    width: 220px;
+    padding: 18px 30px;
+    line-height: 1;
+    color: $text;
+    background-color: #f6f7f7;
+    border: 2px solid #f6f7f7;
+    border-radius: 30px;
+
+    &:focus {
+      border: 2px solid #c1cad6;
+    }
+
+    &_age {
+      width: 100%;
+      height: 100%;
+      padding-right: 60px;
+      
+      &:focus {
+        border: 2px solid #f6f7f7;
+
+        & + span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    width: 260px;
+  }
+
+  &__checkbox {
+    position: relative;
+    display: block;
+    width: 340px;
+    margin: 30px auto 20px;
+    padding-left: 25px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+  
+    &_default {
+      display: none;
+  
+      &:checked + .form__checkbox_new {
+        svg {
+          display: block;
+        } 
+      }
+    }
+      
+    &_new {
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 22px;
+      height: 22px;
+      margin-right: 7px;
+      background-color: #ffffff;
+      border-radius: 3px;
+  
+      svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: none;
+        width: 15px;
+        height: 15px;
+        fill: $accent;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__note {
+    line-height: 1.1;
+    color: $white;
+  }
+}
+
+/* contraindications */
+.contraindications {
+
+  &__lst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include lst;
+    text-align: center;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+}
 
 
 /* footer */
+.footer {
+  margin-top: auto;
+  padding: 40px 0;
+  background-color: #c1cad6;
+
+  &__wrap {
+    font-size: 16px;
+    color: $text;
+    text-align: center;
+  
+    p {
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+  
+    a {
+      color: $text;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        color: darken($text, 15%);
+        text-decoration: underline;
+      }
+    }
+  }
+}

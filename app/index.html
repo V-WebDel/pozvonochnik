@@ -26,7 +26,7 @@
           <br> боли в спине?</p>
         <h1 class="top__title">Комплексная диагностика
           <br> позвоночника за 1 день</h1>
-        <button class="btn top__btn">Записаться</button>
+        <a class="btn top__btn" href="#action">Записаться</a>
       </div>
     </div>
   </section>
@@ -75,14 +75,74 @@
   <section class="cases">
     <div class="container"></div>
   </section>
-  <section class="action">
-    <div class="container"></div>
+  <section class="section action" id="action">
+    <div class="container">
+      <h2 class="action__title">Cпасите себя от инвалидности!</h2>
+      <p class="action__doc">Необходимые документы для приема, которые нужно иметь при себе:
+        <br> Паспорт РФ, Медицинский полис (не обязательно)</p>
+      <p class="action__subtitle">Главный шаг к здоровому позвоночнику
+        <br>
+        <span class="text-up">Вы уже сделали!</span>
+      </p>
+      <form class="form action__form" action="">
+        <div class="form__wrap">
+          <div class="form__field-wrap">
+            <input class="form__field form__field_age" name="Lead[age]" type="tel" placeholder="Ваш возраст" required>
+            <span>лет</span>
+          </div>
+          <input class="form__field" name="Lead[name]" type="text" placeholder="Ваше имя" required>
+          <input class="form__field" name="Lead[phone]" type="tel" placeholder="Ваш телефон" required>
+          <button class="form__btn btn" type="submit">Записаться</button>
+        </div>
+        <label class="form__checkbox">
+          <input class="form__checkbox_default" type="checkbox" name="checkbox" value="ready" checked required>
+          <span class="form__checkbox_new">
+            <svg>
+              <use xlink:href="./img/sprite.svg#check"></use>
+            </svg>
+          </span>Нажимая на кнопку, вы даете согласие
+          <br> на обработку персональных данных
+        </label>
+        <span class="form__note">*Акция только для граждан РФ</span>
+      </form>
+    </div>
   </section>
-  <section class="contraindications">
-    <div class="container"></div>
+  <section class="section contraindications">
+    <div class="container">
+      <h3 class="title-text">ПРОТИВОПОКАЗАНИЯ:</h3>
+      <ul class="contraindications__lst">
+        <li class="contraindications__item">Беременность</li>
+        <li class="contraindications__item">Лактация</li>
+        <li class="contraindications__item">Сахарный диабет (инсулинозависимый)</li>
+        <li class="contraindications__item">Онкологические заболевания</li>
+      </ul>
+    </div>
   </section>
   <footer class="footer">
-    <div class="container"></div>
+    <div class="container">
+      <div class="footer__wrap">
+        <p>ООО «Мед Арт»
+          <br>Адрес: 119017, г. Москва, ул. Малая Ордынка, дом 3, помещение III, комната 1
+          <br>
+          ИНН/КПП: 9705127531 / 770501001
+          <br>
+          ОГРН: 1197746063558
+          <br>
+          Лицензия № ЛО-77-01-018724 от 10 сентября 2019 года</p>
+        <p>
+          <a href="/">Политика конфиденциальности
+            <br>
+          </a>
+          <a href="/">Пользовательское соглашение
+            <br>
+          </a>
+          <a href="/">Согласие на обработку персональных данных</a>
+        </p>
+        <p>* Количество акционных мест ограничено и может отличаться от указанного в описании акции.
+          <br> **Имеются противопоказания, необходимо проконсультироваться со специалистом (врачом).
+          <br> Реклама. Не является публичной офертой.</p>
+      </div>
+    </div>
   </footer>
   <script src="./js/scripts.min.js"></script>
   <script src="./js/main.js"></script>
